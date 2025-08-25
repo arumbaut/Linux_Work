@@ -54,7 +54,9 @@ management
 	-> maintenance mode
 		 -> new y te saldra esto:
 		 ![[Pasted image 20250812122308.png]]
-		 En browse añadir txt con las maquinas a desmonitorizar con este formato: aot_wfdd01ma02;aot_wfdp01ma01;aot_wfdr30rr;
+		 En browse añadir txt con las maquinas a desmonitorizar con este formato: Siempre poner aot_nombre de la maquina
+		 
+		 aot_wfdd01ma02;aot_wfdp01ma01;aot_wfdr30rr;
 		 Luego, upload
 	
 Finalmente guardar desmonitorizado en START

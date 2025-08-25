@@ -8,10 +8,12 @@ Nos da los detalles del FS
 ```
 
 Importante al momento de expandir el tipo de filesystms xfs se utiliza este comando
+
 ⚠️ ¡No uses `resize2fs`! Eso es para ext3/ext4. Para XFS, es **xfs_growfs**, y debe apuntar al **punto de montaje**, no al dispositivo.
 ```
 sudo xfs_growfs /repocopytoran01
 ```
+
 Para ver los discos que tenemos mapeados
 ```
  multipath -ll

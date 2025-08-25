@@ -98,7 +98,7 @@ vgs
 
 ```
 
-Ahora vamos a extender el lvm indicado en la tarea. En este caso especifico le estamos indicando que tome 20Gigas y le estamos especificando de que pv especifico va a tomar a extender el espacio. Si no le indicamos /dev/sdd pues el solo decide de donde toma el espacio.
+Ahora vamos a extender el lvm indicado en la tarea. En este caso especifico le estamos indicando que tome 20Gigas y le estamos especificando de que pv especifico va a tomar a extender el espacio. Si no le indicamos /dev/sdd pues el solo decide de donde toma el espaciod de su vg.
 
 ```
 #lvextend -L +20G ruta_lv pv
@@ -110,12 +110,19 @@ Para usar todo el expacio libre disponible
 lvextend -l +100%FREE /dev/datosvg/misdatos
 ```
 
+
+==Para reducir en caso de que cometieramos algun error se puede hacer siempre y cuando no redimencionaramos el filesystem, es decir antes de ralizar la operacion resize2fs == 
+
+```
+lvreduce -L -3G /dev/mapper/VGExaDb-lv_atoslec
+```
+
 Una ves extendido revisamos que realment extendio.
 ```
 pvs
 ```
 
-Luego haremos un redimensionamiento de archivos pues si ni lo hacemos el lv no se redimencionara aunque lo extendieramos antereiormente
+Luego haremos un redimensionamiento de archivos pues si no lo hacemos el lv no se redimencionara aunque lo extendieramos antereiormente
 ```
 resize2fs /dev/mapper/mzos_vg-lv_ora_mzospp01
 ```
