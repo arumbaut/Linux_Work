@@ -7,3 +7,4 @@ Con la instalación de linux-headers será necesario conocer qué versión de ke
 ```
 uname –r
 ```
+

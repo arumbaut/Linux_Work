@@ -84,6 +84,9 @@ Pasos cuando vamos a ejecutar las tareas de cambio
 6-Cambiamos los discos de estado al deseado
 7-Iniciamos la pc desde  la interface de vmware
 8-Reestablecemos la pass del admin inyectandole el hash obtenido previamente
+```
+usermod -p '$1$CJJYHxtl$asdasd/hzcIva1' root
+```
 9-Hacemos un crqcheck de la maquina y comparamos el estado actual con el estado despues de reiniciar
 10-Hacemos un uptime de la maquina para ponerlo como evidencia en remedy
 11-Cerramos las tareas en remedy y damos paso en Linux-CPD de ser necesario.

@@ -101,8 +101,12 @@ vgs
 Ahora vamos a extender el lvm indicado en la tarea. En este caso especifico le estamos indicando que tome 20Gigas y le estamos especificando de que pv especifico va a tomar a extender el espacio. Si no le indicamos /dev/sdd pues el solo decide de donde toma el espaciod de su vg.
 
 ```
-#lvextend -L +20G ruta_lv pv
+#lvextend -L +20G ruta_lv pv  #Indicando el pv del que queremos que tome el espacio 
 lvextend -L +20G /dev/mapper/mzos_vg-lv_ora_mzospp01 /dev/sdd
+
+#lvextend -L +20G ruta_lv  #Sin indicar el pv el lo toma arbitrariamente 
+lvextend -L +20G /dev/mapper/mzos_vg-lv_ora_mzospp01
+
 ```
 
 Para usar todo el expacio libre disponible
