@@ -7,7 +7,7 @@ Nos da los detalles del FS
 /dev/mapper/veeamcptoran_vg-lv_repocptoran01 xfs    10T  9.9T  139G  99% /repocopytoran01
 ```
 
-Importante al momento de expandir el tipo de filesystms xfs se utiliza este comando
+⚠️Importante siempre revisar el typo de filesystem al momento de expandir el tipo de filesystms xfs se utiliza este comando
 
 ⚠️ ¡No uses `resize2fs`! Eso es para ext3/ext4. Para XFS, es **xfs_growfs**, y debe apuntar al **punto de montaje**, no al dispositivo.
 ```
