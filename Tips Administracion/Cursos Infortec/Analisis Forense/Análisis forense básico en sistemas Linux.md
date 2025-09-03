@@ -75,3 +75,29 @@ netstat -an
 ```
 
 Muy importante tener una copia del fichero boot.log y tener encuenta que systemas levanta con el arranque.
+
+```
+netstat -niv
+```
+se desglosa así:
+
+-i → Muestra las interfaces de red.
+
+-n → Muestra direcciones y números de puerto en formato numérico (no resuelve nombres DNS ni nombres de interfaz).
+
+-v → Activa el modo verbose (más información detallada).
+
+📌 En resumen
+netstat -niv te lista todas las interfaces de red de tu sistema (eth0, lo, ens33, etc.) con información de estadísticas de tráfico:
+
+MTU de la interfaz
+
+RX-OK / TX-OK (paquetes recibidos/enviados correctamente)
+
+RX-ERR / TX-ERR (errores)
+
+RX-DRP / TX-DRP (paquetes descartados)
+
+RX-OVR (paquetes perdidos por buffer lleno)
+
+Flags de la interfaz (UP, BROADCAST, MULTICAST, etc.)
