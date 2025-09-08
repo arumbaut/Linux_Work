@@ -1,3 +1,5 @@
+[[Relays de correo | Instalacion y configuracion de correo]]
+
 Rvisar el servicio del sevidor local 
 
 ```
@@ -19,12 +21,23 @@ tail -f /var/log/maillog
 ```
 
 
+```
+#Ver return path
+grep "from=<" /var/log/maillog
+La parte `from=` es el **Return-Path** que se está utilizando en ese envío.
 
+#Ver el sender 
+grep "from=<" /var/log/maillog
+- El valor entre `<...>` es el **sender** que se usó en ese envío.
+
+#ver solo los dominios
+grep "from=<" /var/log/maillog | awk -F'[@>]' '{print $2}' | sort | uniq
+```
 Apuntes de Cortes a Revisar 
 
 Enviar con sendmail  
 ```  
-echo -e "Subject: Test Email\nThis is a test email." | sendmail -f jose.antonio.cortes.fraga@kyndryl.com [jose.antonio.cortes.fraga@kyndryl.com](mailto:jose.antonio.cortes.fraga@kyndryl.com)  
+echo -e "Subject: Test Email\nThis is a test email." | sendmail -f adrian.alonsorumbaut@kyndryl.com [adrian.alonsorumbaut@kyndryl.com](mailto:adrian.alonsorumbaut@kyndryl.com)  
 ```  
 al añadir el -f cambiamos el return path e indicamos el que queramos
 
