@@ -12,7 +12,9 @@ crqcheck
 
 Acceder por ssh a la maquina, lanzar y guardar los datos en un TXT:
 
+```
 {
+crqcheck --verbose
 cat /etc/selinux/config | grep SELINUX= | grep -v "# SELINUX"
 df -hPT /boot
 df -hPT /usr
@@ -23,6 +25,7 @@ cat /etc/redhat-release
 uname -a
 cat /etc/shadow | grep root | cut -d ':' -f1-2 
 }
+```
 
 (Tas de Revision del backup)
 
