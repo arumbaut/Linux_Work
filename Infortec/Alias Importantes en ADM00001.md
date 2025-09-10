@@ -68,3 +68,7 @@ Parametros del comando
   (--verbose)  Da mas informacion 
   (--diff) Compara dos ficheros del crq 
 ```
+
+```
+rvtquery --host CLVC-ORANGE30_BBDD_PRO_YEC
+```

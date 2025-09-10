@@ -49,3 +49,6 @@ Nivel 2    COMPONETE HW
 
 Nivel 3    COMPONETE HW
 ```
+
+Para cargar el fichero de service dato cuando nos lo requieran
+![[Pasted image 20250910110923.png]]
