@@ -1,1 +1,3 @@
-RTV-TECSE RED DATOS
+RTV-TECSE RED DATOS 
+
+Para cosas de permisos de redes
