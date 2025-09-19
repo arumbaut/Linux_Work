@@ -1,4 +1,4 @@
-Primero realizamos un crqcheck para ver el estado de la maquina esto es en el host que le haremos el cambio.
+	Primero realizamos un crqcheck para ver el estado de la maquina esto es en el host que le haremos el cambio.
 
 ```
   crqcheck --verbose
