@@ -7,3 +7,5 @@ Usuarios jazztel dominios usuarios@jazztel.com
 cambiar op0 y op1 de jazztel (meterlo en el /etc/hosts 10.132.72.21    portalctx.pre.si.orange.es)  
 portalctx.pre.si.orange.es  
 [https://portalctx.pre.si.orange.es/Citrix/vStoreWeb/](https://portalctx.pre.si.orange.es/Citrix/vStoreWeb/ "https://portalctx.pre.si.orange.es/citrix/vstoreweb/")
+
+Los VCenter que son de jazztel que son los 7000 se entra con el dominio de cosmos si entramos con el dominio de jazztel no tendremos permisos

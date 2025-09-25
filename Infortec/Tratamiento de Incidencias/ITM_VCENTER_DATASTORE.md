@@ -1,0 +1,1 @@
+Si datastore pone "rman" o "infinidat" no nos puede llegar inc porque no se monitorea, y si nos llega inc hay que cambiarle el nombre al datsatore poniendo al final "_NOMON#" para que zabbix (programa que nos hace las inc automaticas) no lo pille como string de texto y n nos cree incs

@@ -1,4 +1,5 @@
 Solucion
+
 Nos da los detalles del FS
 ```
  df -hPT /repocopytoran01

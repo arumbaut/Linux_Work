@@ -94,7 +94,7 @@ vi usuario
 usu | grep -f usuario 
 ```
 
-# fijarnos bien en solo copiar el las lineas de useradd y usermod
+# Fijarnos bien en solo copiar el las lineas de useradd y usermod
 
 Nos copiamos esa salida y la llevamos a la maquina donde queremos crear los users y nos creamos un fichero para ejecutarlo y revisamos que todo resulto bien.
 

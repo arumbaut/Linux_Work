@@ -8,6 +8,43 @@ Conexion ssh a la de salto
 creo 
 config.atlas
 
+Configuracion de nuestro archivo de conexion con la rsa. Archivo config.atlas
+```
+Host atlas
+    HostName 10.113.46.179
+    User es48389e
+    Port 22
+    IdentityFile "C:\Users\Adrian Alonso\.ssh\id_rsa"
+    UserKnownHostsFile NUL
+    ServerAliveInterval 60
+    ServerAliveCountMax 3
+```
+
+Para verificar que se abrio la conexion
+
+```
+Get-Process ssh
+
+netstat -ano | findstr 2080
+```
+
+Comando de la conexion desde PowerShell
+```
+ssh -F .\config.atlas -D 2080 atlas -Nfq
+```
+
+Para cerrar si lo ejecutamos sin la opcion -f es solo hacer CTRL+C en la ventana donde ejecutamos el comando de lo contrario debemos matar el proceso de  la siguiente manera
+
+```
+PS C:\Users\Adrian Alonso>  netstat -ano | findstr 2080
+  TCP    127.0.0.1:2080         0.0.0.0:0              LISTENING       24720
+  TCP    [::1]:2080             [::]:0                 LISTENING       24720
+
+PS C:\Users\Adrian Alonso> Stop-Process -Id 24720
+PS C:\Users\Adrian Alonso>
+```
+
+
 ```
 Host mi-servidor
     HostName 10.113.46.179

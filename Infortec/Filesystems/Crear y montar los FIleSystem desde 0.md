@@ -1,4 +1,17 @@
-Ejemplo real nos pdicen que nos presentaron 20T formato de discos de 5T para que creemos los filesystems corresmpondientes
+
+Procedimiento 
+1 - Reescanear los discos presentados
+2 - Crear el PV
+3 - Crear el VG tenientdo en cuanta la nomenclatura ,(si es necesario se crea si no se extiende el que ya exista). La nomenclatura va siempre de 0 - 9 seguir leyendo 
+4 - Crear el LV 
+5 - Dar formato al LV
+6 - Crear el Punto de montaje
+7 - Editar el fstab 
+8 - Montar el lev en el punto de montaje
+
+Leer completo el procedimiento para ubicarnos bien en lo que hacemos y mirar muy bien lo que realizamos.
+
+Ejemplo real nos dicen que nos presentaron 20T formato de discos de 5T para que creemos los filesystems corresmpondientes
 Discos Presentados
 ```
 60050763808105CB400000000000019F 
@@ -33,7 +46,8 @@ mpathua (360050763808105cb40000000000001a0) dm-569 IBM,2145
 De aqui obtenemos los identificadores que les da multipath(mpathtx, mpathty, mpathtz, mpathua)
 
 NOTA: 
-**Verificamos lo VGs (Volume Group) para ver donde crearemos los PVs (Physical Volume) dentro de los VGs (Importante es los VGs van de 10 en 10 ejemplo TSMfile240_249) y dentro de estos ponemos los PVS  y aqui vamos poniendo los LVs que se crean de con notacion ascendente hasta llegar al 49 en este caso , iportante revisa para seguir el orden del lvm **
+Importante es los VGs van de 10 en 10 ejemplo TSMfile240_249 y dentro de estos ponemos los LVs  y aqui vamos poniendo los LVs que se crean de con notacion ascendente hasta llegar al 49 en este caso , iportante revisa para seguir el orden del lvm 
+En este caso que se obseva debajo vemos que el ultimo lv creado en el VGs TSMfile240_249 es  lv_TSMfile242 por lo que creariamos LVs hasta llegar al   lv_TSMfile249 , si el ultimo LVs de la serie creado es lv_TSMfile249, entonces nos creariamos otro VGs el continuo de esta TSMfile250_259 y nos creariamos lo LVs dentro de este empesando por el  lv_TSMfile250 y asi sucesivamente
 Ejemplos
 
 ```

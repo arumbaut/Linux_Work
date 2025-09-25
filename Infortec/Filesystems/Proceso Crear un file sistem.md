@@ -20,6 +20,9 @@ mkdir /BinariosCommvault
 
 Nos creamos el lvm para asignar todo el espacion del vg que nos indicaron
 ```
+
+lvcreate -n nombre_lv -l 100%FREE nombre_VG
+
 lvcreate -n lv_BinariosCommvault -l 100%FREE datos_vg
 #Esta opcion agrega todo el espacio libre en el vg: -l 100%FREE
 #Para un tamaño especifico utilizamos opcion -L 50g
@@ -71,6 +74,8 @@ Creamos una copia de el fstab para luego escribir en el el montaje automatico de
 cp /etc/fstab /etc/fstab.20250610
 ```
 
+/dev/mapper/TSMfile270_279-lv_TSMfile270 /tsmjz8/TSMfile270
+
 Lo editamos 
 ```
 vi /etc/fstab
@@ -104,3 +109,4 @@ tmpfs                  18G  3.8G   14G  22% /dev/shm
 ```
 
 Salimos de la maquina y cerraos la incidencia
+
