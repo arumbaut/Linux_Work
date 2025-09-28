@@ -24,6 +24,13 @@ echo "=== DETALLE DE CARPETAS ==="
 du -sh * | sort -h | column -t
 ```
 
+Compimir log
+```
+Comprime lso que tengan ese patron
+gzip dnf.librepo.log.[0-9]*
+```
+
+
 Limpiar cache en caso de estar muy repleta
 ```
 yum clean all
