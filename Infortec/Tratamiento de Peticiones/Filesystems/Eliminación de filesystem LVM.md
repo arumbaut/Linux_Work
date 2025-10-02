@@ -18,7 +18,7 @@ Observar los PV que componen el LV.
 
 
 ```
-#lvs --segments -o +devices vg_name
+		#lvs --segments -o +devices vg_name
 
 [root@maquina ~]#  lvs --segments -o +devices mzos_vg
   LV                   VG      Attr       #Str Type   SSize   Devices
@@ -67,6 +67,12 @@ Comprobar que el filesystem no está siendo utilizado por procesos activos del s
 [root@]# fuser -m /dev/mapper/mzos_vg-lv_ora_mzospp01
 /dev/dm-5:           28087 28119 28123 28127 28153 28184 28188 28190 28194 28196 28198 28200 28325 28327 28329 28336 28350 28358 28360 28362 28364 28366 106015
 
+
+Si tiene procesos utilizando biscamos quie lo utiliza
+
+ps -fp 25701
+
+Pedimos que se elimine o que nos autoricen a ello.
 ```
 
 Desmontar el filesystem, eliminar el punto de montaje y comentar su referencia en el fichero 'fstab'. [[#^infofilesys]]
