@@ -27,7 +27,7 @@ cat /etc/shadow | grep root | cut -d ':' -f1-2
 }
 ```
 
-(Tas de Revision del backup)
+(Tras de Revision del backup)
 
 Entrar por ssh a la maquina y realizar:
 
@@ -188,8 +188,9 @@ mkrear
 Comprobamos que no haya ningun warning y si los hay los solucionamos hasta que no salga ninguno.
 
 Despues lanzamos:
-
+```
 rear -d -v mkbackup
+```
 (Si da probleamas de espacio en /rear revisar y eliminar backups anteriores)
 ```
 rm -Rf /rear/rear.*
