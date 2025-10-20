@@ -39,7 +39,7 @@ Esto crea un LV de 10 GB llamado `mis_datos` dentro del VG `datosvg`.
 ### 2\. Formatearlo:
 
 ```
-sudo mkfs.ext4 /dev/datosvg/mis_datos
+sudo mkfs.ext4 -m0 /dev/datosvg/mis_datos
 ```
 
 ### 3\. Montarlo:

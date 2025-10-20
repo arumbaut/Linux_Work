@@ -6,10 +6,11 @@ lsmem -> numero de ram
 
 
 ```
+{
 echo "=== Memoria detectada por Linux ==="
 lsmem | grep -E "Total online memory|Total offline memory|Memory block size"
 echo
 free -h
-
+}
 ```
 
