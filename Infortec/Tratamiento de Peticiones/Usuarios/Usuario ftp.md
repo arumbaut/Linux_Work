@@ -1,4 +1,4 @@
-1- Entramos en AOTLXPRFTP00001/00002 (sftpdsi.orange.es 83.231.36.99)
+	1- Entramos en AOTLXPRFTP00001/00002 (sftpdsi.orange.es 83.231.36.99)
 
 2- Creamos el grupo en ambas maquinas con el mismo GID, podemos buscar el grupo viendo usuarios con el home similar, si ya existe no lo creamos:
 
