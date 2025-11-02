@@ -1,0 +1,1 @@
+for i in $(<maquinas.txt); do rvtquery --location $i;done | awk '{print $1, $3, $6}' | column -t

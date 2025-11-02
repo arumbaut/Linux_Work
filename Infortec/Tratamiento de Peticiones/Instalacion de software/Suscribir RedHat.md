@@ -26,3 +26,8 @@ subscription-manager register --username=atlasnx  --auto-attach --password="Te5
 Revisamos un paquete
 yum info python3.x86_64 | grep -i version
 ```
+
+Registrar un repositorio 
+```
+subscription-manager repos -- enable rhel-server-rhscl-7-rpms
+```

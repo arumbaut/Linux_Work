@@ -1,6 +1,8 @@
 Este comando te devuelve el hash del usuario que nos sirve para cambiarle las pass al usuario y despues restablecer la pas anterior.
 
+```
 read -p "Usuario:" user_mod ; echo "usermod -p \"$(grep "^${user_mod}:" /etc/shadow | cut -d: -f2 | sed 's/\$/\\$/g')\" ${user_mod}"
+```
 
 Solicita el nombre del usuario a configurar en este caso IVRVULA
 

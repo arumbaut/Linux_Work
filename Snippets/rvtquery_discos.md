@@ -1,3 +1,1 @@
-SOP_CIBER_PERIMETRAL
-
 for i in $(<maquinas.txt); do rvtquery --vmdk $i;done | awk '{print $1, $2, $5}' | column -t
